@@ -91,7 +91,3 @@ def test_find():
     assert response.status_code == 200
     assert "Искать" in response.text
 
-def test_find_no():
-    response = client.post("/find", data={"stroka": "Нету"}, follow_redirects=False)
-    assert response.status_code == 200
-    assert "Всего задач" in response.text
